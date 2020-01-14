@@ -1,0 +1,36 @@
+- Why SciPy needed
+- Characteristics of SciPy
+- Subpackages of SciPy ( IO , integration , linear algebra , statistics etc: )
+
+
+Scientific Domains
+	* Statistics : Enables Scientists to build hypothesis based on statistical model
+	* Spatial : Enables Scientists to plot data for better analysis
+	* Platform Integrations : At some point of time  we need to use/import matlab and cpp files
+	* Mathematical equations : This include solving linear equaitons , integration, finding determinants inverse etc :
+
+Optimization
+
+Problem : A box's length is twice its width. Sum of three dimension = 60 . What is the min volume?
+
+Solution :
+Let,	x = box width
+	2*x = box length
+	h = box height
+Given,	x + 2*x + h = 60
+	h = 60 - 3*x		--------------------(1)
+Maximise the volume,	V = x*(2*x)*h
+			V = 2*(x**2)*h
+(replacing h with given information using equation (1))
+			V = 2*(x**2)*(60 - 3*x)
+			V = 120*(x**2) - 6*(x**3)
+(differentiating V w.r.t x)
+			V' = 240*(x) - 18*(x**2)
+			Let V' = 0
+			0 = 240*(x) - 18*(x**2)
+			0 = x*(240 - 18*x)
+			x = 0 , x = 13.333
+
+			V'' = 240 - 36*x
+			x = 0 is minimum value 			{V'' is +ve}
+			x = 13.33 is maximum value 		{V'' is -ve}
